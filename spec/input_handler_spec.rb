@@ -24,7 +24,7 @@ RSpec.describe InputHandler do
             expect(handler.valid_input? '9.83442').to be false
         end
 
-        it 'does not allow positive floats' do
+        it 'does not allow negative floats' do
             expect(handler.valid_input? '-9.83442').to be false
         end
 
@@ -77,7 +77,7 @@ RSpec.describe InputHandler do
         end
 
         it 'does not allow non-Latin characters' do
-            expect(handler.valid_input? 'ひらがな').to be false
+            expect(handler.valid_input? 'ひらがな980').to be false
         end
 
         it 'does not allow newline characters' do
